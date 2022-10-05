@@ -27,6 +27,7 @@ export default {
                 if(!res) {
                     throw new Error("could not create new user");
                 }
+                res.user.updateProfile({displayName:name.value});
                 console.log(res.user);
             }
             catch(err) {
