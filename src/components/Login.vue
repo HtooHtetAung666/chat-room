@@ -4,6 +4,7 @@
         <form @submit.prevent="login">
             <input type="email" placeholder="email" v-model="email">
             <input type="password" placeholder="password" v-model="password">
+            <div v-if="error" class="error">{{error}}</div>
             <button>Login</button>
         </form>
     </div>
@@ -11,16 +12,22 @@
 
 <script>
 import {ref} from 'vue'
+import useLogin from '../composables/useLogin'
 
 export default {
     setup() {
         let email=ref("");
         let password=ref("");
-        let login=()=>{
-            console.log(email.value,password.value);
+        let {error,logIn}=useLogin();
+
+        let login=async()=>{
+            let res=await logIn(email.value,password.value);
+            if(res){
+                console.log(res.user);
+            }
         }
 
-        return {email,password,login};
+        return {email,password,login,error};
     }
 }
 </script>

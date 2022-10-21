@@ -13,7 +13,7 @@
 
 <script>
 import {ref} from 'vue'
-import useSignup from '../composable/useSignup'
+import useSignup from '../composables/useSignup'
      
 export default {
     setup() {
