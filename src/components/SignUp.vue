@@ -6,7 +6,7 @@
             <input type="email" placeholder="email" v-model="email">
             <input type="password" placeholder="password" v-model="password">
             <div v-if="error" class="error">{{error}}</div>
-            <button>Sign Up</button>
+            <button class="custom-btn btn-1">Sign Up</button>
         </form>
     </div>
 </template>

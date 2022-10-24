@@ -51,7 +51,7 @@ textarea {
     outline: none;
 }
 textarea::placeholder {
-    color: #cfcdee;
+    color: #cf9fff;
     opacity: 1;
 }
 </style>

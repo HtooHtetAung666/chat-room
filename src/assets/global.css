@@ -1,3 +1,8 @@
+/* :root {
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+} */
+
 body {
     background: #cfcdee;
     color: #444;
@@ -15,11 +20,47 @@ body {
     font-size: 14px;
 }
 button {
-    text-decoration: none;
-    background: #5ae4ca;
-    color: white;
-    font-weight: bold;
-    border: 0;
+    margin: 20px;
+}
+.custom-btn {
+    color: #fff;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+.btn-1 {
+    color: #5ae4ca;
+    border: 1px solid#5ae4ca;;
     border-radius: 20px;
-    padding: 10px 20px;
-} 
+    box-shadow: 0 0 5px #5ae4ca, 0 0 5px #5ae4ca inset;
+    z-index: 1;
+}
+.btn-1:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #5ae4ca;
+    border-radius: 20px;
+    box-shadow:
+     0 0 20px  #5ae4ca;
+    transition: all 0.3s ease;
+}
+.btn-1:hover {
+    color: #fff;
+}
+.btn-1:hover:after {
+    left: 0;
+    width: 100%;
+}
+.btn-1:active {
+    top: 2px;
+}
